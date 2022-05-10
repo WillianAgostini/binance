@@ -12,7 +12,7 @@ license=('unknown')
 checkdepends=('curl' 'coreutils')
 source=('https://ftp.binance.com/electron-desktop/linux/production/binance-amd64-linux.deb')
 source=("${pkgname}-${pkgver}.deb::https://ftp.binance.com/electron-desktop/linux/production/binance-amd64-linux.deb")
-sha256sums=('f0487d3e38cce0b6275046e01d628803129ee0c6fdd456d678c42b905983cc6b')
+sha256sums=($(curl -sL https://ftp.binance.com/electron-desktop/linux/production/binance-amd64-linux-deb-sha256.txt))
 
 check() {
     cd "$srcdir"
